@@ -1,5 +1,7 @@
 package com.qababuworks.strings;
 
+import java.util.Arrays;
+
 public class CharacterCount {
 
     public static void main(String[] args) {
@@ -13,6 +15,11 @@ public class CharacterCount {
             }
         }
         System.out.println("Char 'e' count = "+count);
+
+        // using Stream API
+
+        long len = str.chars().filter(c -> c == 'e').count();
+        System.out.println(len);
 
     }
 }
